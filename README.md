@@ -8,3 +8,5 @@ There are seven files in the folder.
 'ParaSet': the system setting.
 'phantom3dAniso': the generation of phantom data.
 'test_proj': the entrance to the project.
+
+![image](https://user-images.githubusercontent.com/8358267/203784221-43050258-86d5-479a-bb56-f3d13a55e06c.png)
