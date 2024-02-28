@@ -38,25 +38,25 @@ end
 % for x
 if pt1.x < pt2.x
     if am == axm
-        i_min = 2;% the first plane that the ray intersects with after the ray enters the voxel space
+        i_min = 1;% the first plane that the ray intersects with after the ray enters the voxel space
     else
         i_min = ceil((pt1.x + am * ray.x - X_planes(1)) / param.fVoxel);
     end
     
     if aM == axM
-        i_max = Nx;
+        i_max = Nx - 1;
     else
         i_max = floor((pt1.x + aM * ray.x - X_planes(1)) / param.fVoxel);
     end
 else
     if am == axm
-        i_max = Nx - 1;
+        i_max = Nx - 2;
     else
         i_max = floor((pt1.x + am * ray.x - X_planes(1)) / param.fVoxel);
     end
     
     if aM == axM
-        i_min = 1;
+        i_min = 0;
     else
         i_min = ceil((pt1.x + aM * ray.x - X_planes(1)) / param.fVoxel);
     end
@@ -65,25 +65,25 @@ end
 % for y
 if pt1.y < pt2.y
     if am == aym
-        j_min = 2;% the first plane that the ray intersects with after the ray enters the voxel space
+        j_min = 1;% the first plane that the ray intersects with after the ray enters the voxel space
     else
         j_min = ceil((pt1.y + am * ray.y - Y_planes(1)) / param.fVoxel);
     end
     
     if aM == ayM
-        j_max = Ny;
+        j_max = Ny - 1;
     else
         j_max = floor((pt1.y + aM * ray.y - Y_planes(1)) / param.fVoxel);
     end
 else
     if am == aym
-        j_max = Ny - 1;
+        j_max = Ny - 2;
     else
         j_max = floor((pt1.y + am * ray.y - Y_planes(1)) / param.fVoxel);
     end
     
     if aM == ayM
-        j_min = 1;
+        j_min = 0;
     else
         j_min = ceil((pt1.y + aM * ray.y - Y_planes(1)) / param.fVoxel);
     end
@@ -92,25 +92,25 @@ end
 % for z
 if pt1.z < pt2.z
     if am == azm
-        k_min = 2;% the first plane that the ray intersects with after the ray enters the voxel space
+        k_min = 1;% the first plane that the ray intersects with after the ray enters the voxel space
     else
         k_min = ceil((pt1.z + am * ray.z - Z_planes(1)) / param.fVoxel);
     end
     
     if aM == azM
-        k_max = Nz;
+        k_max = Nz - 1;
     else
         k_max = floor((pt1.z + aM * ray.z - Z_planes(1)) / param.fVoxel);
     end
 else
     if am == azm
-        k_max = Nz - 1;
+        k_max = Nz - 2;
     else
         k_max = floor((pt1.z + am * ray.z - Z_planes(1)) / param.fVoxel);
     end
     
     if aM == azM
-        k_min = 1;
+        k_min = 0;
     else
         k_min = ceil((pt1.z + aM * ray.z - Z_planes(1)) / param.fVoxel);
     end
